@@ -15,6 +15,10 @@ def choose_action(player: Character, enemy: Character):
         player.attack(enemy)
     elif action == 'лечиться':
         player.take_heal(player.damage)
+    elif action == 'защищаться':
+        player.armor(player.damage)
+    elif action == 'накинуть эффект лечения':
+        player.hp(player.damage / 0.5)
     else:
         raise UnknownAction('Неизвестное действие')
 
